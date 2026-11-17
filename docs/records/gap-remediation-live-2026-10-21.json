@@ -1,0 +1,71 @@
+{
+  "origin": "http://127.0.0.1:18082",
+  "runId": "100250771cf3",
+  "checks": [
+    {
+      "name": "encrypted_login_and_session_roles",
+      "passed": true
+    },
+    {
+      "name": "team_create_update_invitation_poster_avatar",
+      "passed": true
+    },
+    {
+      "name": "attachment_resume_content_and_reference_count",
+      "passed": true
+    },
+    {
+      "name": "deadline_set_and_explicit_clear",
+      "passed": true
+    },
+    {
+      "name": "writeup_status_upload_and_tar_export",
+      "passed": true
+    },
+    {
+      "name": "division_permissions_named_join_pending_review_accepted",
+      "passed": true
+    },
+    {
+      "name": "game_read_merge_write_notices_observability",
+      "passed": true
+    },
+    {
+      "name": "division_challenge_visibility_override",
+      "passed": true
+    },
+    {
+      "name": "batch_preview_dynamic_upload_resume_secret_free_ledger",
+      "passed": true
+    },
+    {
+      "name": "official_game_zip_import_export_and_xlsx_records",
+      "passed": true
+    },
+    {
+      "name": "orphan_file_delete_fresh_readback",
+      "passed": true
+    },
+    {
+      "name": "batch_cleanup_division_delete_withdraw_logout",
+      "passed": true
+    }
+  ],
+  "completed": true,
+  "flagSubmissions": 0,
+  "remoteMutations": false,
+  "cleanup": [
+    {
+      "gameId": 9,
+      "deleted": true
+    },
+    {
+      "gameId": 8,
+      "deleted": true
+    },
+    {
+      "teamId": 5,
+      "deleted": true
+    }
+  ]
+}

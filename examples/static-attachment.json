@@ -1,0 +1,17 @@
+{
+  "challenge": {
+    "title": "Example: Hello CTF",
+    "category": "Misc",
+    "type": "StaticAttachment"
+  },
+  "configuration": {
+    "content": "Find the flag in the supplied text.",
+    "hints": ["Read the attachment."],
+    "originalScore": 100,
+    "minScoreRate": 0.25,
+    "difficulty": 3
+  },
+  "attachmentPath": "examples/challenge.txt",
+  "flags": [{"flag": "flag{example_only_replace_me}"}],
+  "publish": false
+}

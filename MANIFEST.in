@@ -1,0 +1,11 @@
+include LICENSE README.md THIRD_PARTY_NOTICES.md environment.yml .env.example
+recursive-include licenses *.txt
+recursive-include docs *.md *.json
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include examples *.json *.txt
+recursive-include deploy *.yaml *.py Dockerfile.*
+prune GZCTF
+prune .tools
+prune .local-test
+exclude .env

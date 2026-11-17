@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "gzctf": {
+      "command": "/opt/homebrew/bin/uvx",
+      "args": [
+        "--python",
+        "3.12",
+        "--from",
+        "/Users/nax/Code/GZCTF_MCP",
+        "gzctf-mcp",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "GZCTF_ENV_FILE": "/Users/nax/Code/GZCTF_MCP/.env"
+      }
+    }
+  }
+}

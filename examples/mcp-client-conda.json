@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gzctf": {
+      "command": "/Users/nax/Code/GZCTF_MCP/.conda/bin/python",
+      "args": ["-m", "gzctf_mcp"],
+      "env": {
+        "GZCTF_ENV_FILE": "/Users/nax/Code/GZCTF_MCP/.env"
+      }
+    }
+  }
+}

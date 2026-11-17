@@ -1,0 +1,27 @@
+{
+  "streaming_cookie": {
+    "renewed_cookie_stored": true,
+    "next_request_still_uses_old_cookie": true
+  },
+  "public_download_requires_player": {
+    "public_asset_blocked_locally_without_player_credentials": true
+  },
+  "attachment_timeout": {
+    "created_challenge_id": 9,
+    "attachment_bound": true,
+    "escaped_exception": "httpx.ReadTimeout",
+    "structured_recovery_result": false
+  },
+  "concurrent_game_patches": {
+    "both_calls_succeeded": true,
+    "final_title": "changed",
+    "final_hidden": true,
+    "one_patch_lost": true
+  },
+  "cleanup_after_uncertain_delete": {
+    "first_delete_committed": true,
+    "retry_stops_on_404": true,
+    "next_challenge_not_cleaned": true,
+    "ledger_not_reconciled": true
+  }
+}

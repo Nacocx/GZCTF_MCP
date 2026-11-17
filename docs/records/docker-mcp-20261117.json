@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-17",
+  "origin": "http://127.0.0.1:18082",
+  "project": "gzctf-mcp-verify-20261117",
+  "platformVersion": "1.9.0",
+  "imageRevision": "72ac811097b1b64eb5484f09bbcd4451aba60cc0",
+  "containers": [
+    {
+      "name": "gzctf-mcp-verify-20261117-gzctf-1",
+      "imageId": "sha256:a87b286f0807cf29d04305a5e2e9b1f8dc0bb660ff98d3e1bf7e032bc969e2fc",
+      "image": "gztime/gzctf@sha256:a87b286f0807cf29d04305a5e2e9b1f8dc0bb660ff98d3e1bf7e032bc969e2fc",
+      "status": "running",
+      "health": "healthy"
+    },
+    {
+      "name": "gzctf-mcp-verify-20261117-db-1",
+      "imageId": "sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea",
+      "image": "postgres:16-alpine",
+      "status": "running",
+      "health": "healthy"
+    }
+  ],
+  "apiEncryption": true,
+  "checksPassed": 21,
+  "reports": {
+    "platform": {
+      "origin": "http://127.0.0.1:18082",
+      "runId": "10092975acf8",
+      "checks": [
+        {
+          "name": "encrypted_login_and_session_roles",
+          "passed": true
+        },
+        {
+          "name": "team_create_update_invitation_poster_avatar",
+          "passed": true
+        },
+        {
+          "name": "attachment_resume_content_and_reference_count",
+          "passed": true
+        },
+        {
+          "name": "deadline_set_and_explicit_clear",
+          "passed": true
+        },
+        {
+          "name": "writeup_status_upload_and_tar_export",
+          "passed": true
+        },
+        {
+          "name": "division_permissions_named_join_pending_review_accepted",
+          "passed": true
+        },
+        {
+          "name": "game_read_merge_write_notices_observability",
+          "passed": true
+        },
+        {
+          "name": "division_challenge_visibility_override",
+          "passed": true
+        },
+        {
+          "name": "batch_preview_dynamic_upload_resume_secret_free_ledger",
+          "passed": true
+        },
+        {
+          "name": "official_game_zip_import_export_and_xlsx_records",
+          "passed": true
+        },
+        {
+          "name": "orphan_file_delete_fresh_readback",
+          "passed": true
+        },
+        {
+          "name": "batch_cleanup_division_delete_withdraw_logout",
+          "passed": true
+        }
+      ],
+      "completed": true,
+      "flagSubmissions": 0,
+      "remoteMutations": false,
+      "cleanup": [
+        {
+          "gameId": 4,
+          "deleted": true
+        },
+        {
+          "gameId": 3,
+          "deleted": true
+        },
+        {
+          "teamId": 3,
+          "deleted": true
+        }
+      ]
+    },
+    "fixes": {
+      "origin": "http://127.0.0.1:18082",
+      "runId": "1008419c0ea1",
+      "startedAt": "2026-11-17T10:08:41.136030+00:00",
+      "completed": true,
+      "checks": [
+        {
+          "name": "stdio_73_tools_encrypted_login",
+          "passed": true
+        },
+        {
+          "name": "shared_hash_reference_guard_resume_and_surviving_download",
+          "passed": true
+        },
+        {
+          "name": "real_attachment_readback_response_loss_keeps_recovery_id",
+          "passed": true
+        },
+        {
+          "name": "concurrent_game_updates_preserve_both_fields",
+          "passed": true
+        },
+        {
+          "name": "encrypted_flag_submission_wrong_and_accepted_verdicts",
+          "passed": true
+        },
+        {
+          "name": "admin_test_container_real_container_connect_inject_stop",
+          "passed": true
+        },
+        {
+          "name": "container_action_real_container_connect_inject_stop",
+          "passed": true
+        },
+        {
+          "name": "real_delete_response_loss_recovers_and_continues_batch",
+          "passed": true
+        },
+        {
+          "name": "real_stdio_restart_preserves_dynamic_upload_references",
+          "passed": true
+        }
+      ],
+      "cleanup": [
+        {
+          "tool": "admin_delete_game",
+          "deleted": true
+        },
+        {
+          "tool": "team_action",
+          "deleted": true
+        }
+      ],
+      "flagSubmissions": 3,
+      "faultInjection": "Discard selected real HTTP responses after upstream completion",
+      "discardedResponses": 3,
+      "finishedAt": "2026-11-17T10:09:07.703275+00:00"
+    }
+  },
+  "finalInventory": {
+    "games": 0,
+    "teams": 0,
+    "instances": 0,
+    "files": 0
+  },
+  "knownLimits": [
+    "No seven-day sliding-cookie-expiration test",
+    "Default port mapping tested; PlatformProxy not rerun",
+    "Pinned GZCTF 1.9.0 image, not a v1.9.1 runtime claim"
+  ],
+  "codeSha256": {
+    "src/gzctf_mcp/__init__.py": "7ff9aa07fbc4ab8ca12ac54d9e41427073decf099fa0f0648c2afab45d6619ec",
+    "src/gzctf_mcp/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/gzctf_mcp/_wsrx_runner.py": "73735a3f6d479fdbe40b2541e915136a48a3d8efe262c9418927be7edd931ceb",
+    "src/gzctf_mcp/batch.py": "8e30a6a7cab20b6befeb3006f0d06f01e3b9e26bc10989b3a9efd08e17e5ee53",
+    "src/gzctf_mcp/cli.py": "a9be83db969f0da1647ce49d17261d376d3780625d92bcdd316b43c2e477434c",
+    "src/gzctf_mcp/client.py": "e2c1c88cb07f6a998a357c7e363dcead44658c82e585c8c8e472dfce81080a93",
+    "src/gzctf_mcp/config.py": "d0eb26b817bb4e78e3bb5a5f54cc1a271a51b458de2ca714eed37dd145851ba5",
+    "src/gzctf_mcp/management.py": "4ebc4fa602751a11a54c7a9e994c358cff6985762932581605360f3eab638f8c",
+    "src/gzctf_mcp/models.py": "e507b9fd89ec2b376735097f851440db7d804eab46ce1554f178194d91f4bf8b",
+    "src/gzctf_mcp/proxy.py": "665681ab5c8bd7eca1becc0684b5dee24c8d368744e4e3c67af56a265f0e6e7d",
+    "src/gzctf_mcp/server.py": "5fc006866562c06523459289833b04bf71a8c50771396f98441556a999ad92b7",
+    "src/gzctf_mcp/workflow.py": "c3958732be65de9ab518cc33d2e841bcf8e009e6a5ee266b7eeaadc4b6486a2c"
+  },
+  "extraCleanup": {
+    "testImageBlobsRemoved": 2,
+    "deleteReferenceCalls": 5,
+    "via": "real MCP stdio"
+  }
+}

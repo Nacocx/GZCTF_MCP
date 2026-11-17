@@ -1,0 +1,6 @@
+FROM python:3.12-slim
+WORKDIR /challenge
+COPY challenge.py .
+EXPOSE 8000
+USER 65534:65534
+CMD ["python", "challenge.py"]

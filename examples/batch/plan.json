@@ -1,0 +1,9 @@
+{
+  "items": [
+    {"key": "static", "manifest": {"challenge": {"title": "Batch static demo"}, "configuration": {"hints": ["Example hint"], "originalScore": 500, "difficulty": 5}, "flags": [{"flag": "flag{replace_static_demo}"}]}},
+    {"key": "dynamic", "manifest": {"challenge": {"title": "Batch dynamic demo", "type": "DynamicAttachment"}, "configuration": {"fileName": "attachment.txt"}, "flags": [
+      {"flag": "flag{replace_A}", "attachmentType": "Local", "attachmentPath": "examples/batch/a.txt"},
+      {"flag": "flag{replace_B}", "attachmentType": "Local", "attachmentPath": "examples/batch/b.txt"}
+    ]}}
+  ]
+}

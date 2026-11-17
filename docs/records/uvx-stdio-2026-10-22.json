@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "source": "/Users/nax/Code/GZCTF_MCP",
+      "tools": 73,
+      "passed": true,
+      "transport": "stdio",
+      "platformRequests": 0,
+      "checks": [
+        "initialize",
+        "tools/list",
+        "connection_info",
+        "explicit_env_file",
+        "workspace_outside_source",
+        "missing_auth_isError",
+        "resources/list"
+      ]
+    },
+    {
+      "source": "/Users/nax/Code/GZCTF_MCP/.local-test/dist/gzctf_mcp-0.3.1-py3-none-any.whl",
+      "tools": 73,
+      "passed": true,
+      "transport": "stdio",
+      "platformRequests": 0,
+      "checks": [
+        "initialize",
+        "tools/list",
+        "connection_info",
+        "explicit_env_file",
+        "workspace_outside_source",
+        "missing_auth_isError",
+        "resources/list"
+      ]
+    }
+  ],
+  "completed": true
+}

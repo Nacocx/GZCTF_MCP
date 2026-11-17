@@ -1,0 +1,1299 @@
+{
+  "reviewDate": "2026-11-17",
+  "scalarUrl": "https://gzctf.gzti.me/scalar",
+  "openapiUrl": "https://gzctf.gzti.me/openapi.json",
+  "openapiSha256": "436320427f537eeca5c193a6568b203eb562b469c397268d7c040f3e172897fc",
+  "openapiVersion": "v1",
+  "upstreamSourceCommit": "7e61deefdd3d5232c9dfaabcc7cd856932f774ed",
+  "localReferenceCommit": "cc12f65fe9cd9eb2a94ccfcb3604a81e394e0296",
+  "mcpToolCount": 73,
+  "documentedOperationCount": 131,
+  "coveredOperationCount": 76,
+  "uncoveredOperationCount": 55,
+  "coverageBasis": "Manual implementation-to-route mapping, checked for registered tool names and official operation existence. Route case and placeholder names normalized. Implicit ensure_auth login calls excluded from individual mappings. Coverage is not an assertion of live behavior.",
+  "tools": {
+    "connection_info": [],
+    "check_session": [
+      "GET /api/account/profile",
+      "GET /api/edit/games"
+    ],
+    "auth_requirements": [
+      "GET /api/config",
+      "GET /api/captcha"
+    ],
+    "auth_pow_challenge": [
+      "GET /api/captcha/powchallenge"
+    ],
+    "auth_login": [
+      "GET /api/captcha",
+      "GET /api/config",
+      "POST /api/account/login"
+    ],
+    "auth_logout": [
+      "POST /api/account/logout"
+    ],
+    "list_games": [
+      "GET /api/game"
+    ],
+    "get_game": [
+      "GET /api/game/{id}"
+    ],
+    "list_teams": [
+      "GET /api/team"
+    ],
+    "join_check": [
+      "GET /api/game/{id}/check"
+    ],
+    "join_game": [
+      "GET /api/game/{id}",
+      "GET /api/game/{id}/check",
+      "POST /api/game/{id}"
+    ],
+    "list_challenges": [
+      "GET /api/game/{id}/details"
+    ],
+    "get_challenge": [
+      "GET /api/game/{id}/challenges/{challengeId}"
+    ],
+    "scoreboard": [
+      "GET /api/game/{id}/scoreboard"
+    ],
+    "notices": [
+      "GET /api/game/{id}/notices"
+    ],
+    "submit_flag": [
+      "GET /api/config",
+      "POST /api/game/{id}/challenges/{challengeId}"
+    ],
+    "submission_status": [
+      "GET /api/game/{id}/challenges/{challengeId}/status/{submitId}"
+    ],
+    "container_action": [
+      "POST /api/game/{id}/container/{challengeId}",
+      "DELETE /api/game/{id}/container/{challengeId}",
+      "POST /api/game/{id}/container/{challengeId}/extend"
+    ],
+    "download_attachment": [
+      "GET /assets/{hash}/{filename}"
+    ],
+    "submit_writeup": [
+      "POST /api/game/{id}/writeup"
+    ],
+    "admin_list_games": [
+      "GET /api/edit/games"
+    ],
+    "admin_create_game": [
+      "POST /api/edit/games"
+    ],
+    "admin_get_game": [
+      "GET /api/edit/games/{id}"
+    ],
+    "admin_list_challenges": [
+      "GET /api/edit/games/{id}/challenges"
+    ],
+    "admin_get_challenge": [
+      "GET /api/edit/games/{id}/challenges/{cId}"
+    ],
+    "admin_create_challenge": [
+      "POST /api/edit/games/{id}/challenges"
+    ],
+    "admin_update_challenge": [
+      "PUT /api/edit/games/{id}/challenges/{cId}"
+    ],
+    "admin_upload_file": [
+      "POST /api/assets"
+    ],
+    "admin_set_attachment": [
+      "GET /api/edit/games/{id}/challenges/{cId}",
+      "POST /api/edit/games/{id}/challenges/{cId}/attachment",
+      "GET /assets/{hash}/{filename}"
+    ],
+    "admin_add_flags": [
+      "POST /api/edit/games/{id}/challenges/{cId}/flags"
+    ],
+    "admin_delete_flag": [
+      "DELETE /api/edit/games/{id}/challenges/{cId}/flags/{fId}"
+    ],
+    "admin_delete_challenge": [
+      "DELETE /api/edit/games/{id}/challenges/{cId}"
+    ],
+    "admin_test_container": [
+      "POST /api/edit/games/{id}/challenges/{cId}/container",
+      "DELETE /api/edit/games/{id}/challenges/{cId}/container"
+    ],
+    "platform_config": [
+      "GET /api/config"
+    ],
+    "proxy_open": [
+      "GET /api/config",
+      "GET /api/edit/games/{id}/challenges/{cId}",
+      "GET /api/game/{id}/challenges/{challengeId}",
+      "GET /api/proxy/{id}",
+      "GET /api/proxy/noinst/{id}"
+    ],
+    "proxy_list": [],
+    "proxy_close": [],
+    "admin_list_divisions": [
+      "GET /api/edit/games/{id}/divisions"
+    ],
+    "admin_save_division": [
+      "POST /api/edit/games/{id}/divisions",
+      "PUT /api/edit/games/{id}/divisions/{divisionId}"
+    ],
+    "admin_delete_division": [
+      "DELETE /api/edit/games/{id}/divisions/{divisionId}"
+    ],
+    "admin_participations": [
+      "GET /api/game/{id}/participations"
+    ],
+    "admin_review_participation": [
+      "PUT /api/admin/participation/{id}"
+    ],
+    "admin_update_game": [
+      "GET /api/edit/games/{id}",
+      "PUT /api/edit/games/{id}"
+    ],
+    "admin_delete_game": [
+      "DELETE /api/edit/games/{id}"
+    ],
+    "admin_game_poster": [
+      "PUT /api/edit/games/{id}/poster"
+    ],
+    "admin_notices": [
+      "GET /api/edit/games/{id}/notices"
+    ],
+    "admin_save_notice": [
+      "POST /api/edit/games/{id}/notices",
+      "PUT /api/edit/games/{id}/notices/{noticeId}"
+    ],
+    "admin_delete_notice": [
+      "DELETE /api/edit/games/{id}/notices/{noticeId}"
+    ],
+    "admin_flush_scoreboard": [
+      "POST /api/edit/games/{id}/scoreboard/flush"
+    ],
+    "admin_files": [
+      "GET /api/admin/files"
+    ],
+    "admin_delete_file": [
+      "DELETE /api/assets/{hash}"
+    ],
+    "get_team": [
+      "GET /api/team/{id}"
+    ],
+    "save_team": [
+      "GET /api/team/{id}",
+      "PUT /api/team/{id}",
+      "POST /api/team"
+    ],
+    "team_invite": [
+      "GET /api/team/{id}/invite"
+    ],
+    "team_rotate_invite": [
+      "PUT /api/team/{id}/invite"
+    ],
+    "team_accept_invite": [
+      "POST /api/team/accept"
+    ],
+    "team_action": [
+      "POST /api/team/{id}/leave",
+      "DELETE /api/team/{id}",
+      "POST /api/team/{id}/kick/{userId}",
+      "PUT /api/team/{id}/transfer"
+    ],
+    "team_avatar": [
+      "PUT /api/team/{id}/avatar"
+    ],
+    "leave_game": [
+      "DELETE /api/game/{id}"
+    ],
+    "writeup_status": [
+      "GET /api/game/{id}/writeup"
+    ],
+    "admin_events": [
+      "GET /api/game/{id}/events"
+    ],
+    "admin_submissions": [
+      "GET /api/game/{id}/submissions"
+    ],
+    "admin_instances": [
+      "GET /api/admin/instances"
+    ],
+    "admin_stop_instance": [
+      "DELETE /api/admin/instances/{id}"
+    ],
+    "admin_import_game": [
+      "POST /api/edit/games/import"
+    ],
+    "admin_export_game": [
+      "POST /api/edit/games/{id}/export"
+    ],
+    "admin_export_records": [
+      "GET /api/game/{id}/scoreboardsheet",
+      "GET /api/game/{id}/submissionsheet",
+      "GET /api/admin/writeups/{id}/all"
+    ],
+    "admin_batch_reconcile": [
+      "GET /api/edit/games/{id}/challenges/{cId}"
+    ],
+    "admin_batch_status": [],
+    "admin_cleanup_batch": [
+      "DELETE /api/edit/games/{id}/challenges/{cId}"
+    ],
+    "admin_deploy_challenge": [
+      "GET /api/edit/games/{id}/challenges/{cId}",
+      "POST /api/edit/games/{id}/challenges",
+      "PUT /api/edit/games/{id}/challenges/{cId}",
+      "POST /api/assets",
+      "POST /api/edit/games/{id}/challenges/{cId}/attachment",
+      "POST /api/edit/games/{id}/challenges/{cId}/flags",
+      "GET /assets/{hash}/{filename}"
+    ],
+    "admin_deploy_manifest_file": [
+      "GET /api/edit/games/{id}/challenges/{cId}",
+      "POST /api/edit/games/{id}/challenges",
+      "PUT /api/edit/games/{id}/challenges/{cId}",
+      "POST /api/assets",
+      "POST /api/edit/games/{id}/challenges/{cId}/attachment",
+      "POST /api/edit/games/{id}/challenges/{cId}/flags",
+      "GET /assets/{hash}/{filename}"
+    ],
+    "admin_deploy_batch": [
+      "GET /api/edit/games/{id}/challenges/{cId}",
+      "POST /api/edit/games/{id}/challenges",
+      "PUT /api/edit/games/{id}/challenges/{cId}",
+      "POST /api/assets",
+      "POST /api/edit/games/{id}/challenges/{cId}/attachment",
+      "POST /api/edit/games/{id}/challenges/{cId}/flags",
+      "GET /assets/{hash}/{filename}"
+    ]
+  },
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/api/passkey/token",
+      "operationId": "Passkey_Token",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/passkey/options",
+      "operationId": "Passkey_RequestOptions",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/passkey/login",
+      "operationId": "Passkey_LogIn",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/passkey",
+      "operationId": "Passkey_List",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/passkey",
+      "operationId": "Passkey_Register",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/passkey/creation-options",
+      "operationId": "Passkey_CreationOptions",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/passkey/{credentialId}",
+      "operationId": "Passkey_Rename",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/passkey/{credentialId}",
+      "operationId": "Passkey_Remove",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/account/register",
+      "operationId": "Account_Register",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/account/recovery",
+      "operationId": "Account_Recovery",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/account/passwordreset",
+      "operationId": "Account_PasswordReset",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/account/verify",
+      "operationId": "Account_Verify",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/account/login",
+      "operationId": "Account_LogIn",
+      "tools": [
+        "auth_login"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/account/logout",
+      "operationId": "Account_LogOut",
+      "tools": [
+        "auth_logout"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/account/update",
+      "operationId": "Account_Update",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/account/changepassword",
+      "operationId": "Account_ChangePassword",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/account/changeemail",
+      "operationId": "Account_ChangeEmail",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/account/mailchangeconfirm",
+      "operationId": "Account_MailChangeConfirm",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/account/profile",
+      "operationId": "Account_Profile",
+      "tools": [
+        "check_session"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/account/avatar",
+      "operationId": "Account_Avatar",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/config",
+      "operationId": "Admin_GetConfigs",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/config",
+      "operationId": "Admin_UpdateConfigs",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/config/logo",
+      "operationId": "Admin_UpdateLogo",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/config/logo",
+      "operationId": "Admin_ResetLogo",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/users",
+      "operationId": "Admin_Users",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users",
+      "operationId": "Admin_AddUsers",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users/search",
+      "operationId": "Admin_SearchUsers",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/teams",
+      "operationId": "Admin_Teams",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/teams/search",
+      "operationId": "Admin_SearchTeams",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/teams/{id}",
+      "operationId": "Admin_UpdateTeam",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/teams/{id}",
+      "operationId": "Admin_DeleteTeam",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/users/{userid}",
+      "operationId": "Admin_UpdateUserInfo",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/users/{userid}",
+      "operationId": "Admin_DeleteUser",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/users/{userid}",
+      "operationId": "Admin_UserInfo",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/users/{userid}/password",
+      "operationId": "Admin_ResetPassword",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/logs",
+      "operationId": "Admin_Logs",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/participation/{id}",
+      "operationId": "Admin_Participation",
+      "tools": [
+        "admin_review_participation"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/writeups/{id}",
+      "operationId": "Admin_Writeups",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/writeups/{id}/all",
+      "operationId": "Admin_DownloadAllWriteups",
+      "tools": [
+        "admin_export_records"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/instances",
+      "operationId": "Admin_Instances",
+      "tools": [
+        "admin_instances"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/instances/{id}",
+      "operationId": "Admin_DestroyInstance",
+      "tools": [
+        "admin_stop_instance"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/files",
+      "operationId": "Admin_Files",
+      "tools": [
+        "admin_files"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/tokens",
+      "operationId": "ApiToken_GenerateToken",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/tokens",
+      "operationId": "ApiToken_ListTokens",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/tokens/{id}/restore",
+      "operationId": "ApiToken_RestoreToken",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/tokens/{id}",
+      "operationId": "ApiToken_RevokeToken",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/assets/{hash}/{filename}",
+      "operationId": "Assets_GetFile",
+      "tools": [
+        "download_attachment",
+        "admin_set_attachment",
+        "admin_deploy_challenge",
+        "admin_deploy_manifest_file",
+        "admin_deploy_batch"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/assets",
+      "operationId": "Assets_Upload",
+      "tools": [
+        "admin_upload_file",
+        "admin_deploy_challenge",
+        "admin_deploy_manifest_file",
+        "admin_deploy_batch"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/assets/{hash}",
+      "operationId": "Assets_Delete",
+      "tools": [
+        "admin_delete_file"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/posts",
+      "operationId": "Edit_AddPost",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/edit/posts/{id}",
+      "operationId": "Edit_UpdatePost",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/edit/posts/{id}",
+      "operationId": "Edit_DeletePost",
+      "tools": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games",
+      "operationId": "Edit_AddGame",
+      "tools": [
+        "admin_create_game"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/edit/games",
+      "operationId": "Edit_GetGames",
+      "tools": [
+        "check_session",
+        "admin_list_games"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/edit/games/{id}",
+      "operationId": "Edit_GetGame",
+      "tools": [
+        "admin_get_game",
+        "admin_update_game"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/edit/games/{id}",
+      "operationId": "Edit_UpdateGame",
+      "tools": [
+        "admin_update_game"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/edit/games/{id}",
+      "operationId": "Edit_DeleteGame",
+      "tools": [
+        "admin_delete_game"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/edit/games/{id}/writeups",
+      "operationId": "Edit_DeleteGameWriteUps",
+      "tools": []
+    },
+    {
+      "method": "PUT",
+      "path": "/api/edit/games/{id}/poster",
+      "operationId": "Edit_UpdateGamePoster",
+      "tools": [
+        "admin_game_poster"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/{id}/notices",
+      "operationId": "Edit_AddGameNotice",
+      "tools": [
+        "admin_save_notice"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/edit/games/{id}/notices",
+      "operationId": "Edit_GetGameNotices",
+      "tools": [
+        "admin_notices"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/edit/games/{id}/notices/{noticeId}",
+      "operationId": "Edit_UpdateGameNotice",
+      "tools": [
+        "admin_save_notice"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/edit/games/{id}/notices/{noticeId}",
+      "operationId": "Edit_DeleteGameNotice",
+      "tools": [
+        "admin_delete_notice"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/{id}/divisions",
+      "operationId": "Edit_CreateDivision",
+      "tools": [
+        "admin_save_division"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/edit/games/{id}/divisions",
+      "operationId": "Edit_GetDivisions",
+      "tools": [
+        "admin_list_divisions"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/edit/games/{id}/divisions/{divisionId}",
+      "operationId": "Edit_UpdateDivision",
+      "tools": [
+        "admin_save_division"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/edit/games/{id}/divisions/{divisionId}",
+      "operationId": "Edit_DeleteDivision",
+      "tools": [
+        "admin_delete_division"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/{id}/challenges",
+      "operationId": "Edit_AddGameChallenge",
+      "tools": [
+        "admin_create_challenge",
+        "admin_deploy_challenge",
+        "admin_deploy_manifest_file",
+        "admin_deploy_batch"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/edit/games/{id}/challenges",
+      "operationId": "Edit_GetGameChallenges",
+      "tools": [
+        "admin_list_challenges"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/{id}/scoreboard/flush",
+      "operationId": "Edit_FlushScoreboardCache",
+      "tools": [
+        "admin_flush_scoreboard"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/edit/games/{id}/challenges/{cId}",
+      "operationId": "Edit_GetGameChallenge",
+      "tools": [
+        "admin_get_challenge",
+        "admin_set_attachment",
+        "proxy_open",
+        "admin_batch_reconcile",
+        "admin_deploy_challenge",
+        "admin_deploy_manifest_file",
+        "admin_deploy_batch"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/edit/games/{id}/challenges/{cId}",
+      "operationId": "Edit_UpdateGameChallenge",
+      "tools": [
+        "admin_update_challenge",
+        "admin_deploy_challenge",
+        "admin_deploy_manifest_file",
+        "admin_deploy_batch"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/edit/games/{id}/challenges/{cId}",
+      "operationId": "Edit_RemoveGameChallenge",
+      "tools": [
+        "admin_delete_challenge",
+        "admin_cleanup_batch"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/{id}/challenges/{cId}/container",
+      "operationId": "Edit_CreateTestContainer",
+      "tools": [
+        "admin_test_container"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/edit/games/{id}/challenges/{cId}/container",
+      "operationId": "Edit_DestroyTestContainer",
+      "tools": [
+        "admin_test_container"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/{id}/challenges/{cId}/attachment",
+      "operationId": "Edit_UpdateAttachment",
+      "tools": [
+        "admin_set_attachment",
+        "admin_deploy_challenge",
+        "admin_deploy_manifest_file",
+        "admin_deploy_batch"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/{id}/challenges/{cId}/flags",
+      "operationId": "Edit_AddFlags",
+      "tools": [
+        "admin_add_flags",
+        "admin_deploy_challenge",
+        "admin_deploy_manifest_file",
+        "admin_deploy_batch"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/edit/games/{id}/challenges/{cId}/flags/{fId}",
+      "operationId": "Edit_RemoveFlag",
+      "tools": [
+        "admin_delete_flag"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/{id}/export",
+      "operationId": "Edit_ExportGame",
+      "tools": [
+        "admin_export_game"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/edit/games/import",
+      "operationId": "Edit_ImportGame",
+      "tools": [
+        "admin_import_game"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/recent",
+      "operationId": "Game_RecentGames",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/game",
+      "operationId": "Game_Games",
+      "tools": [
+        "list_games"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}",
+      "operationId": "Game_Game",
+      "tools": [
+        "get_game",
+        "join_game"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/game/{id}",
+      "operationId": "Game_JoinGame",
+      "tools": [
+        "join_game"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/game/{id}",
+      "operationId": "Game_LeaveGame",
+      "tools": [
+        "leave_game"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/check",
+      "operationId": "Game_GetGameJoinCheckInfo",
+      "tools": [
+        "join_check",
+        "join_game"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/scoreboard",
+      "operationId": "Game_Scoreboard",
+      "tools": [
+        "scoreboard"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/notices",
+      "operationId": "Game_Notices",
+      "tools": [
+        "notices"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/events",
+      "operationId": "Game_Events",
+      "tools": [
+        "admin_events"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/submissions",
+      "operationId": "Game_Submissions",
+      "tools": [
+        "admin_submissions"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/cheatinfo",
+      "operationId": "Game_CheatInfo",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/games/{id}/captures",
+      "operationId": "Game_GetChallengesWithTrafficCapturing",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/captures/{challengeId}",
+      "operationId": "Game_GetChallengeTraffic",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/captures/{challengeId}/{partId}",
+      "operationId": "Game_GetTeamTrafficAll",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/captures/{challengeId}/{partId}/all",
+      "operationId": "Game_GetAllTeamTraffic",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/game/captures/{challengeId}/{partId}/all",
+      "operationId": "Game_DeleteAllTeamTraffic",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/captures/{challengeId}/{partId}/{filename}",
+      "operationId": "Game_GetTeamTraffic",
+      "tools": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/game/captures/{challengeId}/{partId}/{filename}",
+      "operationId": "Game_DeleteTeamTraffic",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/details",
+      "operationId": "Game_ChallengesWithTeamInfo",
+      "tools": [
+        "list_challenges"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/participations",
+      "operationId": "Game_Participations",
+      "tools": [
+        "admin_participations"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/scoreboardsheet",
+      "operationId": "Game_ScoreboardSheet",
+      "tools": [
+        "admin_export_records"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/submissionsheet",
+      "operationId": "Game_SubmissionSheet",
+      "tools": [
+        "admin_export_records"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/challenges/{challengeId}",
+      "operationId": "Game_GetChallenge",
+      "tools": [
+        "get_challenge",
+        "proxy_open"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/game/{id}/challenges/{challengeId}",
+      "operationId": "Game_Submit",
+      "tools": [
+        "submit_flag"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/challenges/{challengeId}/status/{submitId}",
+      "operationId": "Game_Status",
+      "tools": [
+        "submission_status"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/game/{id}/writeup",
+      "operationId": "Game_GetWriteup",
+      "tools": [
+        "writeup_status"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/game/{id}/writeup",
+      "operationId": "Game_SubmitWriteup",
+      "tools": [
+        "submit_writeup"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/game/{id}/container/{challengeId}",
+      "operationId": "Game_CreateContainer",
+      "tools": [
+        "container_action"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/game/{id}/container/{challengeId}",
+      "operationId": "Game_DeleteContainer",
+      "tools": [
+        "container_action"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/game/{id}/container/{challengeId}/extend",
+      "operationId": "Game_ExtendContainerLifetime",
+      "tools": [
+        "container_action"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/latest",
+      "operationId": "Info_GetLatestPosts",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts",
+      "operationId": "Info_GetPosts",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/{id}",
+      "operationId": "Info_GetPost",
+      "tools": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/config",
+      "operationId": "Info_GetClientConfig",
+      "tools": [
+        "auth_requirements",
+        "auth_login",
+        "submit_flag",
+        "platform_config",
+        "proxy_open"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/captcha",
+      "operationId": "Info_GetClientCaptchaInfo",
+      "tools": [
+        "auth_requirements",
+        "auth_login"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/captcha/powchallenge",
+      "operationId": "Info_PowChallenge",
+      "tools": [
+        "auth_pow_challenge"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/proxy/{id}",
+      "operationId": "Proxy_ProxyForInstance",
+      "tools": [
+        "proxy_open"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/proxy/noinst/{id}",
+      "operationId": "Proxy_ProxyForNoInstance",
+      "tools": [
+        "proxy_open"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/team/{id}",
+      "operationId": "Team_GetBasicInfo",
+      "tools": [
+        "get_team",
+        "save_team"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/team/{id}",
+      "operationId": "Team_UpdateTeam",
+      "tools": [
+        "save_team"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/team/{id}",
+      "operationId": "Team_DeleteTeam",
+      "tools": [
+        "team_action"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/team",
+      "operationId": "Team_GetTeamsInfo",
+      "tools": [
+        "list_teams"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/team",
+      "operationId": "Team_CreateTeam",
+      "tools": [
+        "save_team"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/team/{id}/transfer",
+      "operationId": "Team_Transfer",
+      "tools": [
+        "team_action"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/team/{id}/invite",
+      "operationId": "Team_InviteCode",
+      "tools": [
+        "team_invite"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/team/{id}/invite",
+      "operationId": "Team_UpdateInviteToken",
+      "tools": [
+        "team_rotate_invite"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/team/{id}/kick/{userId}",
+      "operationId": "Team_KickUser",
+      "tools": [
+        "team_action"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/team/accept",
+      "operationId": "Team_Accept",
+      "tools": [
+        "team_accept_invite"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/team/{id}/leave",
+      "operationId": "Team_Leave",
+      "tools": [
+        "team_action"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/team/{id}/avatar",
+      "operationId": "Team_Avatar",
+      "tools": [
+        "team_avatar"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/team/verify",
+      "operationId": "Team_VerifySignature",
+      "tools": []
+    }
+  ],
+  "modelFields": {
+    "ChallengeUpdate": {
+      "officialModel": "ChallengeUpdateModel",
+      "localOnly": [],
+      "officialOnly": []
+    },
+    "GameCreate": {
+      "officialModel": "GameInfoModel",
+      "localOnly": [],
+      "officialOnly": [
+        "id",
+        "poster",
+        "publicKey"
+      ]
+    },
+    "DivisionConfig": {
+      "officialModel": "DivisionCreateModel",
+      "localOnly": [],
+      "officialOnly": []
+    },
+    "Flag": {
+      "officialModel": "FlagCreateModel",
+      "localOnly": [],
+      "officialOnly": []
+    },
+    "Attachment": {
+      "officialModel": "AttachmentCreateModel",
+      "localOnly": [],
+      "officialOnly": []
+    },
+    "TeamConfig": {
+      "officialModel": "TeamUpdateModel",
+      "localOnly": [],
+      "officialOnly": []
+    }
+  },
+  "runtimeSourceSha256": {
+    "src/gzctf_mcp/__init__.py": "7ff9aa07fbc4ab8ca12ac54d9e41427073decf099fa0f0648c2afab45d6619ec",
+    "src/gzctf_mcp/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/gzctf_mcp/_wsrx_runner.py": "73735a3f6d479fdbe40b2541e915136a48a3d8efe262c9418927be7edd931ceb",
+    "src/gzctf_mcp/batch.py": "58fec6fbdce0cd17d220aff79ffe54dd3b1b9a22ee4db15fcdad11f307a28483",
+    "src/gzctf_mcp/cli.py": "a9be83db969f0da1647ce49d17261d376d3780625d92bcdd316b43c2e477434c",
+    "src/gzctf_mcp/client.py": "510b2a44811416a95bea66af688f68247d61d4d84b19a0f08b6dbb42d7eccc96",
+    "src/gzctf_mcp/config.py": "d0eb26b817bb4e78e3bb5a5f54cc1a271a51b458de2ca714eed37dd145851ba5",
+    "src/gzctf_mcp/management.py": "df50237d67833cb4abf97d726e58c497d994422e99781811d85afea5cc805c1d",
+    "src/gzctf_mcp/models.py": "77dd308e5a381fb747e590507cc4d7811e5f613e8119c4d949256aa1da6542aa",
+    "src/gzctf_mcp/proxy.py": "665681ab5c8bd7eca1becc0684b5dee24c8d368744e4e3c67af56a265f0e6e7d",
+    "src/gzctf_mcp/server.py": "50c32c6a0eec9504a3517d4d7f27bb81fea90bdcd4cb0b38ed8a8402276ecb5b",
+    "src/gzctf_mcp/workflow.py": "cf364b00076841ad7a456f68763f3fa3ada837a01bb0578af67456f2b302cf2f"
+  },
+  "liveServiceTests": false
+}

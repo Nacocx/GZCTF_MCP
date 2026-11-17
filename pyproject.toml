@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gzctf-mcp"
+version = "0.3.1"
+description = "Source-aligned MCP tools for GZCTF organizers and players"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/WebSocketReflectorX-MIT.txt"]
+dependencies = ["mcp>=1.26,<2", "httpx>=0.28,<1", "pydantic>=2.11,<3", "python-dotenv>=1,<2", "cryptography>=44,<51"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "ruff>=0.12"]
+
+[project.scripts]
+gzctf-mcp = "gzctf_mcp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.setuptools.package-data]
+gzctf_mcp = ["_licenses/*.txt", "_licenses/*.md"]

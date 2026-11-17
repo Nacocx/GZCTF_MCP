@@ -1,0 +1,2 @@
+Sample challenge attachment.
+flag{example_only_replace_me}

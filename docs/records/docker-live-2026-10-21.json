@@ -1,0 +1,92 @@
+{
+  "origin": "http://127.0.0.1:18080",
+  "runId": "074227b805c8",
+  "startedAt": "2026-10-21T07:42:27.214169+00:00",
+  "checks": [
+    {
+      "name": "bootstrap_accounts_and_team",
+      "passed": true,
+      "teamId": 1
+    },
+    {
+      "name": "mcp_authentication_and_identity",
+      "passed": true
+    },
+    {
+      "name": "create_game",
+      "passed": true,
+      "gameId": 1
+    },
+    {
+      "name": "dry_run_has_no_remote_mutation",
+      "passed": true
+    },
+    {
+      "name": "deploy_static_attachment_and_publish",
+      "passed": true,
+      "challengeId": 1
+    },
+    {
+      "name": "join_and_read_participant_challenges",
+      "passed": true
+    },
+    {
+      "name": "download_attachment_and_verify_content",
+      "passed": true,
+      "sha256": "2453e6e316b0f3ef4d989733fcd1242c12af3b29ddb33b8dd998a1527a5b5577"
+    },
+    {
+      "name": "real_async_judgement_wrong_and_correct",
+      "passed": true,
+      "wrongSubmissionId": 1,
+      "acceptedSubmissionId": 2
+    },
+    {
+      "name": "scoreboard_and_notices",
+      "passed": true
+    },
+    {
+      "name": "dynamic_attachment_distribution_and_judgement",
+      "passed": true,
+      "challengeId": 2
+    },
+    {
+      "name": "admin_test_container_start_flag_injection_and_stop",
+      "passed": true,
+      "challengeId": 3
+    },
+    {
+      "name": "container_action_start_flag_injection_and_stop",
+      "passed": true,
+      "challengeId": 3
+    },
+    {
+      "name": "writeup_pdf_upload_and_readback",
+      "passed": true
+    },
+    {
+      "name": "resume_no_duplicate_flags_and_delete_draft",
+      "passed": true
+    }
+  ],
+  "completed": true,
+  "gameId": 1,
+  "containerChallengeId": 3,
+  "writeupFields": [
+    "fileSize",
+    "name",
+    "note",
+    "submitted"
+  ],
+  "finishedAt": "2026-10-21T07:42:53.577116+00:00",
+  "platformVersion": "1.9.0.0",
+  "platformImage": "gztime/gzctf@sha256:a87b286f0807cf29d04305a5e2e9b1f8dc0bb660ff98d3e1bf7e032bc969e2fc",
+  "imageRevision": "72ac811097b1b64eb5484f09bbcd4451aba60cc0",
+  "referenceSourceRevision": "cc12f65fe9cd9eb2a94ccfcb3604a81e394e0296",
+  "databaseImage": "postgres:16-alpine",
+  "challengeImage": "gzctf-mcp-fixture:local",
+  "dockerVersion": "29.4.2",
+  "architecture": "arm64",
+  "transport": "real MCP stdio subprocess + real HTTP",
+  "mocks": false
+}

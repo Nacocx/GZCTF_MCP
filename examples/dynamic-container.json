@@ -1,0 +1,20 @@
+{
+  "challenge": {
+    "title": "Example: Dynamic Web",
+    "category": "Web",
+    "type": "DynamicContainer"
+  },
+  "configuration": {
+    "content": "Start the instance and solve the web challenge.",
+    "containerImage": "registry.example.com/ctf/web:1.0",
+    "exposePort": 80,
+    "memoryLimit": 128,
+    "cpuCount": 1,
+    "storageLimit": 256,
+    "networkMode": "Isolated",
+    "flagTemplate": "flag{[GUID]}",
+    "originalScore": 500
+  },
+  "flags": [],
+  "publish": false
+}

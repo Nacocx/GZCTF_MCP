@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-23",
+  "version": "0.3.1",
+  "license": "MIT",
+  "copyright": "2026 Nacocx",
+  "mainLicenseSha256": "a06b5833a0a6edb63a2e7b8358172ec1371f1d853cee558344fa09b8cc57bdd5",
+  "noticeSha256": "6a98908292bd3507376d5cf5da06a78511febd5f8a47004630e40d6a355cf7c2",
+  "artifacts": [
+    {
+      "artifact": "gzctf_mcp-0.3.1-py3-none-any.whl",
+      "sha256": "8b3b9dd88a2facb8b22f1da60c9bac783aefd14de7a0ccd09980e3c9889245a7",
+      "licenseExpression": "MIT",
+      "licenseFiles": [
+        "LICENSE",
+        "THIRD_PARTY_NOTICES.md",
+        "licenses/WebSocketReflectorX-MIT.txt"
+      ],
+      "mainLicensePaths": [
+        "gzctf_mcp-0.3.1.dist-info/licenses/LICENSE"
+      ],
+      "mainLicenseMatches": true,
+      "wsrxLicenseMatches": true,
+      "noticesMatch": true
+    },
+    {
+      "artifact": "gzctf_mcp-0.3.1.tar.gz",
+      "sha256": "c646faae16e6cc4c620b1d24728bfd15234c520015c0681f568e8037e1e19417",
+      "licenseExpression": "MIT",
+      "licenseFiles": [
+        "LICENSE",
+        "THIRD_PARTY_NOTICES.md",
+        "licenses/WebSocketReflectorX-MIT.txt"
+      ],
+      "mainLicensePaths": [
+        "gzctf_mcp-0.3.1/LICENSE"
+      ],
+      "mainLicenseMatches": true,
+      "wsrxLicenseMatches": true,
+      "noticesMatch": true
+    }
+  ],
+  "published": false
+}

@@ -1,0 +1,522 @@
+{
+  "date": "2026-10-23",
+  "packageVersion": "0.3.1",
+  "upstreamCommit": "cc12f65fe9cd9eb2a94ccfcb3604a81e394e0296",
+  "upstreamDirty": false,
+  "method": {
+    "minComparableLineCharacters": 12,
+    "consecutiveRetainedLines": 3,
+    "minBlockCharacters": 90,
+    "minPythonStringCharacters": 40,
+    "warning": "No overlap does not exclude cross-language adaptation; manual review required"
+  },
+  "upstreamComparedFiles": 549,
+  "restrictedPathsNotRead": [
+    "src/GZCTF/ClientApp/src/components/Copyright.tsx",
+    "src/GZCTF/ClientApp/src/hooks/useConfig.ts",
+    "src/GZCTF/Services/Container/Manager/DockerManager.cs",
+    "src/GZCTF/Services/Container/Manager/IContainerManager.cs",
+    "src/GZCTF/Services/Container/Manager/KubernetesManager.cs"
+  ],
+  "files": [
+    {
+      "path": "src/gzctf_mcp/__init__.py",
+      "sha256": "7ff9aa07fbc4ab8ca12ac54d9e41427073decf099fa0f0648c2afab45d6619ec",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/__main__.py",
+      "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/_licenses/THIRD_PARTY_NOTICES.md",
+      "sha256": "2c77678053f7e2d8b97a906170491294911de15eebed65d3c39c6e33c2364850",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/_licenses/WebSocketReflectorX-MIT.txt",
+      "sha256": "6b1cf3d4baa48a8f2e2b9642798cebeb21a452153d67aab81c85aae64495d3f5",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/_wsrx_runner.py",
+      "sha256": "73735a3f6d479fdbe40b2541e915136a48a3d8efe262c9418927be7edd931ceb",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/batch.py",
+      "sha256": "58fec6fbdce0cd17d220aff79ffe54dd3b1b9a22ee4db15fcdad11f307a28483",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/cli.py",
+      "sha256": "a9be83db969f0da1647ce49d17261d376d3780625d92bcdd316b43c2e477434c",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/client.py",
+      "sha256": "510b2a44811416a95bea66af688f68247d61d4d84b19a0f08b6dbb42d7eccc96",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/config.py",
+      "sha256": "d0eb26b817bb4e78e3bb5a5f54cc1a271a51b458de2ca714eed37dd145851ba5",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/management.py",
+      "sha256": "df50237d67833cb4abf97d726e58c497d994422e99781811d85afea5cc805c1d",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/models.py",
+      "sha256": "77dd308e5a381fb747e590507cc4d7811e5f613e8119c4d949256aa1da6542aa",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/proxy.py",
+      "sha256": "665681ab5c8bd7eca1becc0684b5dee24c8d368744e4e3c67af56a265f0e6e7d",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/server.py",
+      "sha256": "50c32c6a0eec9504a3517d4d7f27bb81fea90bdcd4cb0b38ed8a8402276ecb5b",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp/workflow.py",
+      "sha256": "cf364b00076841ad7a456f68763f3fa3ada837a01bb0578af67456f2b302cf2f",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp.egg-info/PKG-INFO",
+      "sha256": "53066bd25ed1aba2cb12289f9371a2971ffc671359c05e9f9eed7b8f7f97b868",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp.egg-info/SOURCES.txt",
+      "sha256": "357087976b729d44791cce49d53a5277eb8084071742f5df121a8ad0b2baf8b6",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp.egg-info/dependency_links.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp.egg-info/entry_points.txt",
+      "sha256": "3f85003fe87be6f73633cb96f36575bb718d1eac596636ea1f84e7b262589c60",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp.egg-info/requires.txt",
+      "sha256": "0a02879b4f4dabff301be86909b9b3604f3198a6be19eae48f06bd048cad29d5",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "src/gzctf_mcp.egg-info/top_level.txt",
+      "sha256": "8fac4ee3e71492186f42239a3640218e8f492c19dcbdc1a111af49c4c4f132a4",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "scripts/install_wsrx.py",
+      "sha256": "d34fb5c5314ee270447422fcfb15285e40d9a972692acf53a98e97b0088a1fc4",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "scripts/live_acceptance.py",
+      "sha256": "5b302d8edf8b551518d2b5f9fefc8823563d70aed4e2c31cc003c9d5fbf42703",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "scripts/live_gap_acceptance.py",
+      "sha256": "ed2b6277dec3f28312f7734cd805cd385b4b7a564cd83f35c9230c4342d63fd8",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "scripts/live_proxy_acceptance.py",
+      "sha256": "4c281aa7a3f02c5848dee48495b377a840c2a470978d2e0269c629888b8c9c53",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "scripts/local_setup.py",
+      "sha256": "96359969ad372226907b45772ab88820625e29028bf23686ac61e3dea2d5dc29",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "scripts/remote_admin_smoke.py",
+      "sha256": "795a9fca5ded9ff0117e372dae3d1c5bce037dd1b589371008b34043a13d8f43",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "scripts/source_origin_audit.py",
+      "sha256": "7f48507734c64ed0313904c87c57bf19db36b0a2e6bc45f103a0793c9617c4d3",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "scripts/uvx_acceptance.py",
+      "sha256": "b5462b6ce9a4956d534cac2e8b8e28691990d57c3d914688da554e9c496be1e8",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "e50d16a237a09ee8913ed55eac2b7a80bc2a200ee26d6ca5f3604bc00c514ed7",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha256": "4e9d79fe03c2c375c02bee5c9e9840cb8d1b07706918313065be5e03ed5e6cb5",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "tests/test_contract.py",
+      "sha256": "a993d8de60165fb387b0e84595800ac53679fc87b125bfeb5c382c195740427a",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "tests/test_proxy.py",
+      "sha256": "131b947950b601b84cd638991b26930d25c5d9ba6cbb87e2d244205692b6243a",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "tests/test_remediation.py",
+      "sha256": "95a623302353fc737c28a2c3e857f2a19722e9b0488de146c6d7eb363eb5de1d",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "tests/test_remote_cleanup.py",
+      "sha256": "927d567b8820c3422ab4f53c24423e615f054b3cd6e62cd98468f0fe067073f6",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "tests/test_stdio.py",
+      "sha256": "4bcd9d7bb472107c4f6b94851ecd19ff9aa4c10e624f95363802969f31fc62ee",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "deploy/local/Dockerfile.challenge",
+      "sha256": "01ef17ba80f1a2278c5c75c00abc8297662a8416f13f3912002d1855ef1dcf39",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "deploy/local/challenge.py",
+      "sha256": "1848e70c32fabc37ace03005e907b964e79bbeff6c2639847a410d2143186d8f",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "deploy/local/compose.encrypted.yaml",
+      "sha256": "13dd0a3f3ba2ee23bdd2a57c8a9d4603a64173ce27ccc8c9bf0097ca9d252375",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "deploy/local/compose.proxy.yaml",
+      "sha256": "63e69ca3a5cddfcdc3dd5bd8b720d78400f21651320f70d1ea1e23eb9693ed1a",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "deploy/local/compose.yaml",
+      "sha256": "767c3580292982f4a11bed494bea3a87c91fa214050c70df3e04ab269a889d49",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "examples/batch/a.txt",
+      "sha256": "d56d120b73279ca1bcd176e0b987a81c5ef12d3a583a82161bcc8f6b0b79c3de",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "examples/batch/b.txt",
+      "sha256": "f11e069f00c51c2e40ca35902d579dc9699af38fe25812adde6108e686c02d02",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "examples/batch/plan.json",
+      "sha256": "c846c5b88073571f722a31120a2f287041a149d8c87b845e535ff7a8308f7690",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "examples/challenge.txt",
+      "sha256": "c74a744f17ac82b7e43b0936afa48a3afc0ade9119ccaf6ae69f42d35561140c",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "examples/dynamic-container.json",
+      "sha256": "3fc223d0b429ea3e63bde825b90ebf3fd9e868721d13d4bf667d225bcac9e294",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "examples/mcp-client-conda.json",
+      "sha256": "3deacfd26f036428fbbb66d2bac9249e6d8fbbb6cb191bfd3323537d255e29e4",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "examples/mcp-client.json",
+      "sha256": "e4a2a0dfbc29c34f3b5a0dcb044c106f2736a29f6c65e99b9f03d2723bc7efb8",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "examples/static-attachment.json",
+      "sha256": "3d02041a9efa8ac98ccb96ecb42c41f767028d8188096c6173fac1dc1c7212b4",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    },
+    {
+      "path": "licenses/WebSocketReflectorX-MIT.txt",
+      "sha256": "6b1cf3d4baa48a8f2e2b9642798cebeb21a452153d67aab81c85aae64495d3f5",
+      "exactUpstreamFiles": [],
+      "matchingBlocks": [],
+      "longStringMatches": []
+    }
+  ],
+  "totals": {
+    "reviewedFiles": 49,
+    "exactMatchingFiles": 0,
+    "filesWithMatchingBlocks": 0,
+    "filesWithLongStringMatches": 0
+  },
+  "licenseFiles": {
+    "LICENSE.txt": "b148a2a47565fc480c1b086f16a56a48b09a73205b80c5ac02882713b9b312e3",
+    "LICENSE_ADDENDUM.txt": "f4dbf3d6f10b96acc084fa276527deac353b6ae96b6dd58b9b20237756eb4497",
+    "NOTICE": "ec239c2e30bf882884bd1fa4b2f9b273639cdbbfaaaa1337d7487ae3f0d4ff4d",
+    "PROPRIETARY_COMPONENTS.md": "55a90bd90bab03d0206dcc0e94c18048419a26746a9788f61b03d2cb1ee02db1",
+    "TRADEMARKS.md": "6f046a6882e2dba3f1484484e3d412d4abc813a7d8122f0b4ba2196bad4416d7",
+    "license/LicenseRef-GZCTF-Restricted.txt": "0c30233ede56acbb393d687f6d59d34ad06d29d0f4b588638f157ec9db32e354"
+  },
+  "artifacts": [
+    {
+      "name": "gzctf_mcp-0.3.1.tar.gz",
+      "sha256": "27967056d16bfd7739dfde95ee5b877278ae1f259d51315bf583442c491b23d9",
+      "files": 81,
+      "forbiddenEntries": [],
+      "sourceFiles": [
+        {
+          "path": "gzctf_mcp/__init__.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/__main__.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/_wsrx_runner.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/batch.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/cli.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/client.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/config.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/management.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/models.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/proxy.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/server.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/workflow.py",
+          "included": true,
+          "matchesWorkingTree": true
+        }
+      ],
+      "wsrxLicenseIncluded": true,
+      "wsrxBinaryIncluded": false
+    },
+    {
+      "name": "gzctf_mcp-0.3.1-py3-none-any.whl",
+      "sha256": "ea79ef721551c4006906503acdeef85e8d5f1742391a69f051e2fecaed08e6b4",
+      "files": 21,
+      "forbiddenEntries": [],
+      "sourceFiles": [
+        {
+          "path": "gzctf_mcp/__init__.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/__main__.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/_wsrx_runner.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/batch.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/cli.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/client.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/config.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/management.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/models.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/proxy.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/server.py",
+          "included": true,
+          "matchesWorkingTree": true
+        },
+        {
+          "path": "gzctf_mcp/workflow.py",
+          "included": true,
+          "matchesWorkingTree": true
+        }
+      ],
+      "wsrxLicenseIncluded": true,
+      "wsrxBinaryIncluded": false
+    }
+  ]
+}

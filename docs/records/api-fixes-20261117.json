@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-17",
+  "issuesAddressed": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "toolCount": 73,
+  "tests": {
+    "command": ".conda/bin/python -m pytest -q tests/test_api_fixes.py tests/test_contract.py tests/test_remediation.py tests/test_stdio.py",
+    "passed": 45,
+    "newRegressions": 14,
+    "durationSeconds": 1.89
+  },
+  "ruff": "passed for six changed runtime modules and new regression module",
+  "validation": "MockTransport, temporary files, real local stdio process; no live GZCTF requests",
+  "runtimeSourceSha256": {
+    "src/gzctf_mcp/batch.py": "8e30a6a7cab20b6befeb3006f0d06f01e3b9e26bc10989b3a9efd08e17e5ee53",
+    "src/gzctf_mcp/client.py": "e2c1c88cb07f6a998a357c7e363dcead44658c82e585c8c8e472dfce81080a93",
+    "src/gzctf_mcp/management.py": "826b3ab3ef04dcfde04d4334beb1b9204cf398537fadd00a53ba6cce7dce2d23",
+    "src/gzctf_mcp/models.py": "e507b9fd89ec2b376735097f851440db7d804eab46ce1554f178194d91f4bf8b",
+    "src/gzctf_mcp/server.py": "5fc006866562c06523459289833b04bf71a8c50771396f98441556a999ad92b7",
+    "src/gzctf_mcp/workflow.py": "c3958732be65de9ab518cc33d2e841bcf8e009e6a5ee266b7eeaadc4b6486a2c"
+  }
+}

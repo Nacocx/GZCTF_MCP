@@ -1,0 +1,11 @@
+{
+  "version": "0.3.0",
+  "phase": "complete",
+  "P1": "passed_targeted",
+  "P2": "passed_contract_and_docker",
+  "P3": "passed_contract_and_docker",
+  "tests": 50,
+  "docker_checks": 12,
+  "remote_mutations": false,
+  "flag_submissions": 0
+}

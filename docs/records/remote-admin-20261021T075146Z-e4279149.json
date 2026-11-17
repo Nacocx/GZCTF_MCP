@@ -1,0 +1,59 @@
+{
+  "origin": "https://covteam-ctf.nacocx.top",
+  "runId": "20261021T075146Z-e4279149",
+  "startedAt": "2026-10-21T07:51:46.443734+00:00",
+  "scope": "administrator authoring only",
+  "answerSubmissions": 0,
+  "checks": [
+    {
+      "name": "administrator_authentication",
+      "passed": true
+    },
+    {
+      "name": "isolated_hidden_future_game_created",
+      "passed": true
+    },
+    {
+      "name": "dry_run_no_remote_mutation",
+      "passed": true
+    },
+    {
+      "name": "attachment_uploaded_sha256_verified",
+      "passed": true
+    },
+    {
+      "name": "challenge_flags_attachment_configuration_readback",
+      "passed": true
+    },
+    {
+      "name": "attachment_download_content_verified",
+      "passed": true
+    },
+    {
+      "name": "resume_preserves_single_flag",
+      "passed": true
+    },
+    {
+      "name": "add_and_delete_test_flag_without_submission",
+      "passed": true
+    },
+    {
+      "name": "publish_disable_and_score_update_in_hidden_game",
+      "passed": true
+    }
+  ],
+  "cleanup": {
+    "challengeDeleteViaMcp": true,
+    "challengeAbsent": true,
+    "gameAbsent": true,
+    "attachmentAbsent": true,
+    "attachmentInventoryAbsent": true,
+    "attachmentFreshPathHttp": 404
+  },
+  "completed": true,
+  "gameId": 2,
+  "challengeId": 16,
+  "remainingGameCount": 1,
+  "cleanupRecheck": "Initial attachment deletion returned 404 after challenge removal; administrator file inventory and fresh asset URL confirm absence.",
+  "finishedAt": "2026-10-21T07:53:17.124224+00:00"
+}

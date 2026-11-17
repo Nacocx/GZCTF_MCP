@@ -1,0 +1,48 @@
+name: gzctf-mcp-local
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: gzctf
+      POSTGRES_USER: gzctf
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Run scripts/local_setup.py first}
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U gzctf -d gzctf']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  gzctf:
+    image: gztime/gzctf@sha256:a87b286f0807cf29d04305a5e2e9b1f8dc0bb660ff98d3e1bf7e032bc969e2fc
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - '127.0.0.1:18080:8080'
+    environment:
+      GZCTF_ConnectionStrings__Database: Host=db;Port=5432;Database=gzctf;Username=gzctf;Password=${DB_PASSWORD}
+      GZCTF_XorKey: ${XOR_KEY:?Run scripts/local_setup.py first}
+      GZCTF_ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Run scripts/local_setup.py first}
+      GZCTF_AccountPolicy__AllowRegister: 'true'
+      GZCTF_AccountPolicy__ActiveOnRegister: 'true'
+      GZCTF_AccountPolicy__EmailConfirmationRequired: 'false'
+      GZCTF_AccountPolicy__UseCaptcha: 'false'
+      GZCTF_GlobalConfig__ApiEncryption: 'false'
+      GZCTF_DisableRateLimit: 'true'
+      GZCTF_ContainerProvider__Type: Docker
+      GZCTF_ContainerProvider__PublicEntry: 127.0.0.1
+      GZCTF_ContainerProvider__DockerConfig__Uri: unix:///var/run/docker.sock
+      GZCTF_ContainerProvider__DockerConfig__ChallengeNetwork: gzctf-mcp-challenges
+    volumes:
+      - files:/app/files
+      - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+      test: [CMD, wget, -q, --spider, http://localhost:3000/healthz]
+      interval: 3s
+      timeout: 3s
+      retries: 40
+      start_period: 15s
+volumes:
+  database:
+  files:

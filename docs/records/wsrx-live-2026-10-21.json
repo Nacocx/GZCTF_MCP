@@ -1,0 +1,61 @@
+{
+  "origin": "http://127.0.0.1:18081",
+  "startedAt": "2026-10-21T08:13:55.166257+00:00",
+  "wsrxVersion": "0.6.2",
+  "platformVersion": "1.9.0.0",
+  "portMapping": "PlatformProxy",
+  "transport": "real MCP stdio -> upstream wsrx CLI -> GZCTF WebSocket -> Docker HTTP",
+  "checks": [
+    {
+      "name": "platform_proxy_configuration_detected",
+      "passed": true
+    },
+    {
+      "name": "admin_test_instance_http_via_wsrx_websocket",
+      "passed": true
+    },
+    {
+      "name": "same_instance_proxy_reused",
+      "passed": true
+    },
+    {
+      "name": "explicit_proxy_close_releases_port_and_keeps_container",
+      "passed": true
+    },
+    {
+      "name": "player_instance_http_via_wsrx_websocket_without_answer_submission",
+      "passed": true
+    },
+    {
+      "name": "independent_admin_player_tunnels_listed",
+      "passed": true
+    },
+    {
+      "name": "container_stop_automatically_closes_player_proxy",
+      "passed": true
+    },
+    {
+      "name": "mcp_exit_automatically_closes_remaining_proxy",
+      "passed": true
+    }
+  ],
+  "answerSubmissions": 0,
+  "completed": true,
+  "cleanup": {
+    "testGameAbsent": true
+  },
+  "gameId": 2,
+  "challengeId": 2,
+  "finishedAt": "2026-10-21T08:14:07.542956+00:00",
+  "wsrxBinarySha256": "29704813efa731299b9e5ff6cf32b2946fdd8dfeda3af20c278558b6b488bd1c",
+  "unitTestsPassed": 42,
+  "ownedProxyProcessesRemaining": 0,
+  "proxyFixtureStackStopped": true,
+  "cliArchiveSha256": "3b356991557dcb65342ff037aeb5fa9edc743038d39c2b1f921aebd2a3648177",
+  "upstreamMitSha256": "6b1cf3d4baa48a8f2e2b9642798cebeb21a452153d67aab81c85aae64495d3f5",
+  "wheelSha256": "5338a59bfde71b8d847f53b72c091d84052e8a4e10a232bb47c98aa551a17155",
+  "wheelSdistLicensePreservationVerified": true,
+  "remoteUserWebsiteModified": false,
+  "packagedWheelStdioToolCount": 35,
+  "packagedWheelSmokePassed": true
+}
