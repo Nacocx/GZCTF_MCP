@@ -1,5 +1,10 @@
 # Changelog
 
+## 未发布 — 2026-11-19
+
+- 新增 dsh bundle `dsh-plugin/`：通过 `@deepseek-ai/dsh-mcp-client` 以 stdio 接入本服务，把 73 个工具注册为 `mcp__gzctf__*`；启动器自动定位仓库、校验 `.env`，并按 `GZCTF_MCP_PYTHON` → `.conda` → `python3` → `uvx` 选择解释器。
+- 本地桌面 profile 安装验证：安装返回 applied，同一会话内 `mcp__gzctf__connection_info` 实调成功；新增 `docs/dsh-plugin.md` 与 README 接入说明。未改动 Python 运行代码。
+
 ## 未发布 — 2026-11-17
 
 - 启动独立本地 GZCTF 1.9.0/PostgreSQL 夹具，21 组真实 MCP stdio 验收通过，包含加密判题、实际题目容器、附件引用计数、三次响应丢失和进程重启恢复；比赛/队伍/题目实例/文件最终均清零，平台保留运行。

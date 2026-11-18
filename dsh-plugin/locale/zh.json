@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "GZCTF MCP 桥接",
+    "description": "通过 stdio 接入本仓库的 GZCTF MCP 服务，把 73 个出题、赛务与参赛工具注册为 mcp__gzctf__*：预演并上题、管理比赛与队伍、启停容器、提交 Flag。需要能 import gzctf_mcp 与 mcp 的 Python 环境（或 uv）以及填好的 .env；管理员 Cookie 允许在真实站点执行删除类操作。单次调用 180 秒超时，proxy_* 依赖 wsrx，停用插件前全部工具 schema 都会加入每次请求；启动失败会保持 failed，修好环境并重载或重启后恢复。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}

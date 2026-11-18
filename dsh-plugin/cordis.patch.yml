@@ -1,0 +1,36 @@
+# DSH bundle layer: bridge the GZCTF MCP server (stdio) into the harness.
+#
+# The MCP client starts one server per row and names its tools
+# mcp__<serverName>__<tool>, so this row registers mcp__gzctf__*.
+#
+# The command is machine-specific: /Users/nax/Code/GZCTF_MCP is this checkout.
+# Another location needs GZCTF_MCP_HOME in the dsh process environment before
+# launch (a GUI-launched app may not inherit shell exports), or an edited path
+# in a profile-patch override of this row. The bundle is installed as a link to
+# this directory, so moving the checkout also requires reinstalling it from the
+# new path.
+- insert:
+    - id: gzctf-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: gzctf
+        transport: stdio
+        command: /bin/sh
+        args:
+          - -c
+          - |
+            dir=${GZCTF_MCP_HOME:-/Users/nax/Code/GZCTF_MCP}
+            launcher=$dir/dsh-plugin/bin/launch.sh
+            if [ -x "$launcher" ]; then
+                exec "$launcher"
+            elif [ -f "$launcher" ]; then
+                exec sh "$launcher"
+            fi
+            printf 'gzctf-mcp: launcher not found at %s; set GZCTF_MCP_HOME to the GZCTF_MCP checkout\n' "$launcher" >&2
+            exit 1
+        # Batch deploys, imports, and attachment transfers can exceed the
+        # client's 60 s default; the server keeps its own per-request timeout.
+        toolCallTimeoutMs: 180000
+        # A broken launcher or missing .env should fail loudly, not register an
+        # empty tool set that silently disappears.
+        failOnStartupError: true

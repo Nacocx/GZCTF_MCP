@@ -97,6 +97,16 @@ python scripts/install_wsrx.py
 - 先通过 `admin_test_container` 或 `container_action` 启动实例，再调用 `proxy_open(game_id, challenge_id, role)` 获取本机 `127.0.0.1:<port>` 地址。
 - 可用 `platform_config`、`proxy_list`、`proxy_close` 管理隧道；停止容器、禁用/删除题目或退出 MCP 时会自动关闭对应隧道。
 
+## 接入 DeepSeek Harness（dsh 插件）
+
+仓库根目录的 [dsh-plugin](dsh-plugin/) 是一个 dsh bundle：通过 `@deepseek-ai/dsh-mcp-client` 以 stdio 拉起本服务，把全部工具注册为 `mcp__gzctf__*`。
+
+1. 确认 `.env` 已配置，且某个 Python 环境能 `import gzctf_mcp, mcp`（见 [插件说明](docs/dsh-plugin.md)）。
+2. 在 dsh 的「插件」页点 **Add plugin**，粘贴 `dsh-plugin/` 的绝对路径（内置能力等价于把该目录安装为 bundle）。
+3. 安装后调用 `mcp__gzctf__connection_info`，再调用 `mcp__gzctf__check_session` 验证身份；工具通常直接出现在当前会话，未出现时新开会话。
+
+bundle 以 `link:` 指向本仓库，**移动仓库后需按新路径重新安装**。仓库不在 `/Users/nax/Code/GZCTF_MCP` 时，安装前修改 `dsh-plugin/cordis.patch.yml` 的默认路径，或在启动 dsh 前设置 `GZCTF_MCP_HOME=<仓库根目录>`（GUI 启动的 dsh 可能不继承 shell 导出的变量）。
+
 ## 测试与文档
 
 ```bash
@@ -108,6 +118,7 @@ ruff check src tests
 - [完整工具清单（73 个）](docs/tools-v0.3.md)
 - [详细使用说明](docs/gap-remediation-usage.md)（加密认证、分组权限、动态附件、批量对账与错误码）
 - [uvx / stdio 分发与接入说明](docs/uvx-stdio.md)
+- [DeepSeek Harness 插件接入](docs/dsh-plugin.md)（bundle 结构、启动链路与故障排查）
 - [更新日志](docs/CHANGELOG.md)
 - [本地 Docker 真实验收](docs/docker-mcp-20261117.md)（另见 [wsrx 验收](docs/wsrx-acceptance.md)、[API 修复说明](docs/api-fixes-20261117.md)）
 

@@ -1,0 +1,25 @@
+{
+  "name": "gzctf-mcp-dsh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DSH bundle that connects the local GZCTF MCP server over stdio.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "bin/launch.sh",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

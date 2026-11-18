@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "GZCTF MCP bridge",
+    "description": "Connects the GZCTF MCP server in this checkout over stdio, exposing its 73 organizer, operator, and player tools as mcp__gzctf__*: preflight and deploy challenges, manage games and teams, start containers, and submit flags. Requires a Python environment that imports gzctf_mcp and mcp (or uv) plus a filled .env; admin cookies allow destructive edits on the live site. Each call times out after 180 seconds, proxy_* needs wsrx, and every tool schema joins each request until the bundle is disabled. A failed startup leaves the row failed until the environment is fixed and Harness reloads or restarts.",
+    "detail": "docs/DETAIL.md"
+  }
+}
