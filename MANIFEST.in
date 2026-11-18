@@ -1,6 +1,7 @@
 include LICENSE README.md THIRD_PARTY_NOTICES.md environment.yml .env.example
 recursive-include licenses *.txt
 recursive-include docs *.md *.json
+recursive-include dsh-plugin *.json *.yml *.sh *.svg *.md
 recursive-include scripts *.py
 recursive-include tests *.py
 recursive-include examples *.json *.txt
